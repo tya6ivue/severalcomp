@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "FirstName": "Kurtis",
+    "LastName": "Weisslnat",
+    "MobileNumber": "+91********",
+    "Email": "xyz@gmail.com",
+    "Address": "Rex Trails"
+  },
+  {
+    "id": 2,
+    "FirstName": "Earvin",
+    "LastName": "Graham",
+    "MobileNumber": "+91********",
+    "Email": "xyz@gmail.com",
+    "Address": "Victor"
+  },
+  {
+    "id": 3,
+    "FirstName": "Tom",
+    "LastName": "Anthem",
+    "MobileNumber": "+91********",
+    "Email": "tom@gmail.com",
+    "Address": "Victor"
+  },
+  {
+    "id": 4,
+    "FirstName": "Mathu",
+    "LastName": "Gam",
+    "MobileNumber": "+91********",
+    "Email": "mat@gmail.com",
+    "Address": "America"
+  }
+]
