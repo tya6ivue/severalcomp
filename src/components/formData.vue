@@ -1,16 +1,13 @@
 <template>
   <div>
     <form class="form" name="myForm">
-      First Name:
-      <inputBox
+      First Name:<inputBox
         :type="'text'"
         :placeholder="'Enter First Name'"
         :content="'First_name'"
         @updateVal="updateVal"
       />
-
-      Last Name:
-      <inputBox
+      Last Name:<inputBox
         :type="'text'"
         :placeholder="'Enter Last Name'"
         :content="'Last_name'"
@@ -40,7 +37,7 @@
         @updateVal="updateVal"
       />
 
-      <button type="submit" @click.prevent="submit" class="button">Add</button>
+      <button type="submit" v-on:click.prevent="submit">Add</button>
     </form>
   </div>
 </template>
@@ -53,20 +50,43 @@ export default {
     inputBox,
   },
   data() {
-    this.param = 'someValue'
     return {
-      
+      users: {
+        id: "",
+        FirstName: "",
+        LastName: "",
+        MobileNumber: "",
+        Email: "",
+        Address: "",
+      },
+
       profileObj: {},
     };
   },
   methods: {
     updateVal(param) {
-      console.log(param);
+      // console.log(this.users);
+      if (param.content === "First_name") {
+        this.users.FirstName = param.value;
+      }
+
+      if (param.content === "Last_name") {
+        this.users.LastName = param.value;
+      }
+      if (param.content === "Mobile_number") {
+        this.users.MobileNumber = param.value;
+      }
+      if (param.content === "Email-id") {
+        this.users.Email = param.value;
+      }
+      if (param.content === "Address") {
+        this.users.Address = param.value;
+      }
     },
-  
-  },
-  submit() {
-    this.$emit('clicked', 'someValue')
+    submit() {
+      this.$emit("clicked", this.users);
+      // console.log(this.users)
+    },
   },
 };
 </script>

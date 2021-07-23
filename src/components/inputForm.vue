@@ -1,6 +1,6 @@
 <template>
   <div>
-    <formData />
+    <formData @clicked="clicked" :content="usersss" />
     <tableData />
   </div>
 </template>
@@ -15,9 +15,17 @@ export default {
     tableData,
   },
   data: function () {
-    return {};
+    return {
+      usersss: {},
+      
+    };
   },
-  methods: {},
+  methods: {
+    clicked(users) {
+      console.log(users)
+      this.usersss = users
+    }
+  },
 };
 </script>
 <style scoped>
