@@ -17,14 +17,13 @@ export default {
   data: function () {
     return {
       usersss: {},
-      
     };
   },
   methods: {
     clicked(users) {
-      console.log(users)
-      this.usersss = users
-    }
+      console.log(users);
+      this.usersss = users;
+    },
   },
 };
 </script>

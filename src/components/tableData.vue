@@ -1,8 +1,6 @@
 <template>
   <div>
-    
     <table>
-
       <tr v-for="(jsonData, index) in myJson" :key="index">
         <td>{{ jsonData.id }}</td>
         <td>{{ jsonData.FirstName }}</td>
@@ -10,13 +8,12 @@
         <td>{{ jsonData.MobileNumber }}</td>
         <td>{{ jsonData.Email }}</td>
         <td>{{ jsonData.Address }}</td>
-        
+
         <td><button class="btn" v-on:click="deleteItem(index)">X</button></td>
       </tr>
       <tr>
-        <td> xvrgwth{{content}} </td>
+        <td>xvrgwth{{ content }}</td>
       </tr>
-    
     </table>
   </div>
 </template>
@@ -29,25 +26,20 @@ export default {
 
   data() {
     return {
-        
       myJson: tableValue,
-    
     };
   },
   props: {
     content: {
-       type:Object,
-       default: () => {}
-      },
-    
-
-      
+      type: Object,
+      default: () => {},
+    },
   },
 
   methods: {
     deleteItem: function (index) {
       this.todos.splice(index, 1);
-  this.myJson = this.content
+      this.myJson = this.content;
     },
   },
 };
