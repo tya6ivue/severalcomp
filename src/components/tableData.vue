@@ -11,8 +11,8 @@
 
         <td><button class="btn" v-on:click="deleteItem(index)">X</button></td>
       </tr>
-      <tr>
-        <td>xvrgwth{{ content }}</td>
+      <tr v-for="(contentData, index) in content" :key="index">
+        <td>{{ contentData.id }}</td>
       </tr>
     </table>
   </div>
@@ -39,7 +39,6 @@ export default {
   methods: {
     deleteItem: function (index) {
       this.todos.splice(index, 1);
-      this.myJson = this.content;
     },
   },
 };

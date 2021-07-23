@@ -1,7 +1,7 @@
 <template>
   <div>
-    <formData @clicked="clicked" :content="usersss" />
-    <tableData />
+    <formData @clicked="clicked" />
+    <tableData :content="form_values" />
   </div>
 </template>
 <script>
@@ -16,33 +16,24 @@ export default {
   },
   data: function () {
     return {
-      usersss: {},
+      form_values: {},
     };
   },
   methods: {
     clicked(users) {
-      console.log(users);
-      this.usersss = users;
+      // console.log(users);
+      this.form_values =  users;
     },
   },
+  watch: {
+    form_values: function(old, newval) {
+      console.log(old, newval)
+    }
+  }
 };
 </script>
 <style scoped>
-table {
-  margin-top: 20px;
-  width: 100%;
-  background-color: yellow;
-  border: 1px solid black;
-}
 
-table tr {
-  padding: 10px;
-  color: red;
-}
-
-table tr td {
-  border: 1px solid black;
-}
 
 .btn {
   margin-right: 5px;

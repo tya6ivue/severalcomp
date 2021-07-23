@@ -37,7 +37,7 @@
         @updateVal="updateVal"
       />
 
-      <button type="submit" v-on:click.prevent="submit">Add</button>
+      <button class="button" type="submit" v-on:click.prevent="submit">Add</button>
     </form>
   </div>
 </template>
@@ -65,7 +65,6 @@ export default {
   },
   methods: {
     updateVal(param) {
-      // console.log(this.users);
       if (param.content === "First_name") {
         this.users.FirstName = param.value;
       }
@@ -85,7 +84,6 @@ export default {
     },
     submit() {
       this.$emit("clicked", this.users);
-      // console.log(this.users)
     },
   },
 };
